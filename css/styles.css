@@ -1,0 +1,23 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+/*Estilos de header*/
+header {
+  background-color: #084B83;
+  border: 3px inset #97DB4F;
+}
+header nav ul {
+  display: flex;
+  list-style: none;
+  column-gap: 30px;
+  padding: 30px;
+}
+header nav ul li a {
+  text-decoration: none;
+  color: #97DB4F;
+}
+
+/*# sourceMappingURL=styles.css.map */
