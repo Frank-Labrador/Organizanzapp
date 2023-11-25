@@ -4,23 +4,27 @@ function simuladorAhorros(salario, arriendo, seguroVehiculo) {
     const numMeses = Number(prompt("ingrese el numero de meses a simular"))
 
     for (let i = 0; i < numMeses; i+=1) {
+        //rango entre 200$ y 50$
         let comida = Math.ceil(Math.random() * (200 - 50 + 1)) + 50;
+        //rango entre 40$ y 15$
         let luz = Math.ceil(Math.random() * (40 - 15 + 1)) + 15;
+        //rango 20$ y 5$
         let agua = Math.ceil(Math.random() * (20 - 5 + 1)) + 5;
+        //rango entre 80$ y 50$
         let impuestos = Math.ceil(Math.random() * (80 - 50 + 1)) + 50;
-        let ahorro = salario - arriendo - comida - luz - agua - seguroVehiculo - impuestos;
+        let ahorro = salario - arriendo - comida - luz - agua - seguroVehiculo - impuestos + " $ ";
 
 
         if (ahorro > 0) {
-            console.log("Mes " + (i + 1) + ": Pudiste ahorrar " + ahorro);
+            console.log("Mes " + (i + 1) + ": Pudiste ahorrar " + ahorro + " $ ");
             totalAhorro += ahorro;
         } else {
             console.log("Mes " + (i + 1) + ": No ahorraste nada, salame");
         }
     }
 
-console.log("Ahorro total en " + numMeses + " meses: " + totalAhorro);
-alert("Ahorro total en " + numMeses + " meses: " + totalAhorro);
+console.log("Ahorro total en " + numMeses + " meses: " + totalAhorro + " $ ");
+alert("Ahorro total en " + numMeses + " meses: " + totalAhorro + "$");
 }
 
 simuladorAhorros(1200, 600, 100);
