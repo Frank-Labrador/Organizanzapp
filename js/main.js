@@ -30,10 +30,10 @@ function simuladorAhorros(salario, arriendo, seguroVehiculo) {
 
 
         if (ahorro > 0) {
-            console.log(nombreMeses[i] + ": Pudiste ahorrar " + ahorro + " Dolares ");
+            console.log(nombreMeses[i%12] + ": Pudiste ahorrar " + ahorro + " Dolares ");
             totalAhorro += ahorro;
         } else {
-            console.log(nombreMeses[i] + ": No ahorraste nada, salame");
+            console.log(nombreMeses[i%12] + ": No ahorraste nada, salame");
         }
 
     }
@@ -54,6 +54,8 @@ function filtroPorMes(listaDeGastos, mes){
 }
 
 simuladorAhorros(1200, 600, 100);
+
+
 
 
 
