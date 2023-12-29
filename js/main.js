@@ -21,7 +21,7 @@ function simuladorAhorros(salario, arriendo, seguroVehiculo) {
 
             mes: nombreMeses[i%12]
         }
-
+//agregamos al array el objeto gasto
         listaDeGastos.push(gasto)
 
         let ahorro = salario - arriendo - gasto.comida - gasto.luz - gasto.agua - seguroVehiculo - gasto.impuestos - gasto.capricho;
@@ -42,18 +42,66 @@ function simuladorAhorros(salario, arriendo, seguroVehiculo) {
     alert("Ahorro total en " + numMeses + " meses: " + totalAhorro + " Dolares");
 
     console.table(listaDeGastos)
-
+//Resultado del mes de febrero en este metodo
     let gastosFebrero = filtroPorMes(listaDeGastos,"Febrero")
     console.table(gastosFebrero);
 }
 
-
+//metodo para dar resultados por mes en el simulador
 function filtroPorMes(listaDeGastos, mes){
     
     return listaDeGastos.filter(gasto => gasto.mes==mes)
 }
 
-simuladorAhorros(1200, 600, 100);
+//simuladorAhorros(1200, 600, 100);
+
+
+//Creamos la funcion para crear el simulador de ahorro que interactua con el DOM
+function simuladorAhorro(){
+    const nombreMeses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+
+    let salario = parseInt(document.querySelector("#salario").value);
+    let arriendo = parseInt(document.querySelector("#arriendo").value);
+    let transporte =parseInt( document.querySelector("#transporte").value);
+    let comida = parseInt(document.querySelector("#comida").value);
+    let luz = parseInt(document.querySelector("#luz").value);
+    let agua = parseInt(document.querySelector("#agua").value);
+    let impuestos = parseInt(document.querySelector("#impuestos").value);
+    let gastosVarios = parseInt(document.querySelector("#gastosVarios").value);
+
+    let gastos = arriendo + transporte + comida + luz + agua + impuestos + gastosVarios;
+    let gastoTotal = salario - gastos;
+    document.querySelector("#resultado").value = gastoTotal;
+
+    //se utiliza un nombre aleatorio de prueba
+    let usuario = [{ 
+        "usuario": {
+            "nombre": "Juan",
+            "apellido": "Perez"
+        } 
+    }]
+    
+    //array de objeto para el calculo de meses
+    nombreMeses.forEach((mes, index) => {
+        let calculo =  {
+            "salario" : salario,
+            "arriendo" : arriendo,
+            "transporte" : transporte* (index+1),
+            "comida" : comida* (index+1),
+            "luz" : luz* (index+1),
+            "agua" : agua* (index+1),
+            "impuestos" : impuestos* (index+1),
+            "gastosVarios" : gastosVarios* (index+1),
+        }
+        usuario.push(calculo);
+        
+    });
+
+    let jsonString = JSON.stringify(usuario);
+    
+    localStorage.setItem("resultado", jsonString);
+}
+    
 
 
 

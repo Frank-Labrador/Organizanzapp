@@ -1,7 +1,7 @@
 /*Estilos de header*/
 header{
-    background-color: #084B83;
-    border: 3px inset #97DB4F ;
+    background-color: $color-principal;
+    border: 3px inset $color-secundario;
     nav{
         ul{
             display: flex;
@@ -11,7 +11,7 @@ header{
             li{
                 a{
                     text-decoration: none;
-                    color: #97DB4F;
+                    color: $color-secundario;
                 }
             }
 

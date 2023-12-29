@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/styles.css">
     <title>OrganiZanZapp || inicio</title>
 </head>
+
 <body>
     <header>
         <nav>
@@ -16,13 +18,100 @@
                 <li>
                     <a href="./pages/conversor.html"> Conversor</a>
                 </li>
-                <li>
-                    <a href="./pages/simulador.html"> Simulador </a>
-                </li>
             </ul>
         </nav>
     </header>
     <main>
+
+
+        <section class="ahorroForm">
+
+            <div class="formulario">
+                <h1>Simula tus ahorros</h1>
+                <h3>Ingreso de sueldo</h3>
+                <section class="formSalario">
+                    <label for="salario" class="colocar_nome">Salario
+                    </label>
+                    <input type="number" name="salario" id="salario" required
+                        placeholder="Ingrese su salario">
+                </section>
+                <h3>Ingresa tus Gastos mensuales</h3>
+
+
+                <div class="">
+                
+                    <form id="formAhorro">
+
+
+                    <div>
+                        <label for="arriendo" class="colocar_nome">Arriendo
+                        </label>
+                        <input type="number" name="arriendo" id="arriendo" required
+                        placeholder="Gastos de arriendo"> 
+                        </div>
+
+                    
+                    <div>                        
+                        <label for="transporte" class="colocar_email">Transporte
+                        </label>
+                        <input type="number" name="transporte" id="transporte" required
+                        placeholder="Gastos en transporte">
+                    </div>
+
+                    
+                    <div>                    
+                        <label for="comida" class="formComida">Comida
+                    </label>
+                    <input type="number" name="comida" id="comida" placeholder="Gastos en comida" required>
+                    </div>
+
+                
+                    <div>
+                        <label for="luz" class="colocar_telefone">Luz
+                    </label>
+                    <input type="number" name="luz" id="luz" placeholder="Gastos de luz" required>
+                    </div>
+
+                    <div>
+                        <label for="agua" class="colocar_nome">Agua
+                        </label>
+                        <input type="number" name="agua" id="agua" required
+                        placeholder="Gastos de Agua">  
+                    </div>
+
+                    
+                    
+                    <div>
+                        <label for="impuestos" class="colocar_email">Impuestos
+                        </label>
+                        <input type="number" name="impuestos" id="impuestos" required
+                        placeholder="ingrese sus impuestos">
+                    </div>
+
+                    
+                    <div>
+                        <label for="gastosVarios" class="colocar_telefone">Gastos Varios
+                        </label>
+                        <input type="number" name="gastosVarios" id="gastosVarios" placeholder="Ingrese gastos extras" required>
+                    </div>
+
+                    
+                </div>
+                    
+                    <button onclick="simuladorAhorro()" type="button" name="enviar_formulario" id="enviar">
+                        <p>Enviar</p>
+                    </button>
+
+
+                </form>
+            </div>
+        </section>
+        <p>
+            <label for="resultado" class="colocar_nome">Resultado
+            </label>
+            <input type="number" name="resultado" id="resultado">
+        </p>
+
 
     </main>
     <footer>
@@ -30,4 +119,5 @@
     </footer>
     <script src="./js/main.js"></script>
 </body>
+
 </html>
