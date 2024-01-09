@@ -6,17 +6,20 @@
 
 /*Estilos de fuente*/
 html {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Quantico", sans-serif;
+  font-family: "Salsa", cursive;
 }
 
 h1 {
+  font-size: 50px;
   padding: 20px;
   font-weight: bold;
   color: #084B83;
 }
 
 h3 {
-  padding: 15px;
+  padding: 20px;
+  font-size: 30px;
 }
 
 /*Estilos de header*/
@@ -37,7 +40,44 @@ header nav ul li a {
 
 main .ahorroForm {
   display: flex;
-  padding: 15px;
+  padding: 20px;
+  justify-content: center;
+}
+main .ahorroForm .formulario .formSalario {
+  padding-bottom: 10px;
+  font-size: 35px;
+}
+main .ahorroForm .formulario .formSalario input {
+  width: 250px;
+  height: 30px;
+}
+main .ahorroForm button {
+  width: 100px;
+  height: 50px;
+  background-color: #084B83;
+  color: #97DB4F;
+  font-size: 15px;
+  font-weight: bold;
+}
+main .ahorroForm button:hover {
+  border: 2px solid #97DB4F;
+}
+main .ahorroForm .formGastos div {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+main .ahorroForm .formGastos div input {
+  width: 200px;
+  height: 25px;
+}
+main .resulForm {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  font-size: 20px;
+}
+main .resulForm input {
+  border: none;
 }
 
 /*# sourceMappingURL=styles.css.map */

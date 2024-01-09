@@ -1,14 +1,17 @@
 /*Estilos de fuente*/
 html{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Quantico', sans-serif;
+    font-family: 'Salsa', cursive;
 }
 
 h1{
+    font-size: 50px;
     padding: 20px;
     font-weight: bold;
     color: $color-principal;
 }
 h3{
-    padding: 15px;
+    padding: 20px;
+    font-size: 30px;
     
 }

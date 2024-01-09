@@ -56,6 +56,9 @@ function filtroPorMes(listaDeGastos, mes){
 //simuladorAhorros(1200, 600, 100);
 
 
+
+
+
 //Creamos la funcion para crear el simulador de ahorro que interactua con el DOM
 function simuladorAhorro(){
     const nombreMeses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
@@ -72,6 +75,21 @@ function simuladorAhorro(){
     let gastos = arriendo + transporte + comida + luz + agua + impuestos + gastosVarios;
     let gastoTotal = salario - gastos;
     document.querySelector("#resultado").value = gastoTotal;
+
+    //colocamos una condicion para cuando den numeros negativos
+    let resultadoInput = document.querySelector("#resultado");
+    if (gastoTotal >= 0) {
+        resultadoInput.value = gastoTotal;
+    } else {
+        //cambiamos temporalmente de input a text
+        resultadoInput.type = "text";
+        resultadoInput.value = "No Ahorraste nada :C";
+        //luego retomamos el input a number
+        setTimeout(function() {
+            resultadoInput.type = "number";
+            resultadoInput.value = "";
+        }, 5000);
+    }
 
     //se utiliza un nombre aleatorio de prueba
     let usuario = [{ 
