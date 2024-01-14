@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Quantico:ital@1&family=Salsa&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="./../css/styles.css">
-    <script src="./js/tabla.js"></script>
+    <link rel="stylesheet" href="./../css/styles.css" />
+    <script src="./../js/main.js" defer></script>
+    <script src="./../js/tabla.js" defer></script>
     <title>OrganiZanZapp || Tabla de ahorros</title>
 </head>
+
 <body>
     <header>
         <nav>
@@ -23,66 +26,22 @@
             </ul>
         </nav>
     </header>
-    <main>
+    <main class="registroTabla">
+        <h1>Registro de Ahorro</h1>
+        <input type="text" name="" id="usuarioTabla" />
+
         <table border="1">
             <thead>
                 <tr>
-                    <th>Nombre</th>
                     <th>Mes</th>
                     <th>Ahorro</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <td rowspan="12">Persona A</td>
-                    <td>Enero</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>Febrero</td>
-                    
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>Marzo</td>
-                    
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>Abril</td>
-                    <td></td>
-                </tr>                <tr>
-                    <td>Mayo</td>
-                    <td></td>
-                </tr>                <tr>
-                    <td>Junio</td>
-                    <td></td>
-                </tr>                <tr>
-                    <td>Julio</td>
-                    <td></td>
-                </tr>                <tr>
-                    <td>Agosto</td>
-                    <td></td>
-                </tr>                <tr>
-                    <td>Septiembre</td>
-                    <td></td>
-                </tr>                <tr>
-                    <td>Octubre</td>
-                    <td></td>
-                </tr>                <tr>
-                    <td>Noviembre</td>
-                    <td></td>
-                </tr>                <tr>
-                    <td>Diciembre</td>
-                    <td></td>
-                </tr>
-                
-            </tbody>
+            <tbody id="tablaDeAhorro"></tbody>
         </table>
     </main>
-    <footer>
-
-    </footer>
+    <footer></footer>
     <script src="./../js/main.js"></script>
 </body>
+
 </html>

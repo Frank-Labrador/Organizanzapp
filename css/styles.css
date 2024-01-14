@@ -5,6 +5,12 @@
 }
 
 /*Estilos de fuente*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 html {
   font-family: "Quantico", sans-serif;
   font-family: "Salsa", cursive;
@@ -78,6 +84,31 @@ main .resulForm {
 }
 main .resulForm input {
   border: none;
+}
+main .resulForm .noAhorrasteOculto {
+  display: none;
+}
+main .resulForm .noAhorrasteMostrar {
+  display: block;
+}
+
+.registroTabla {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.registroTabla h1 {
+  text-align: center;
+}
+.registroTabla #usuarioTabla {
+  width: auto;
+  font-size: 35px;
+  margin-left: 100px;
+  border: none;
+}
+.registroTabla table {
+  margin-top: 20px;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,21 @@
+.registroTabla {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+        text-align: center;
+    }
+
+    #usuarioTabla {
+        width: auto;
+        font-size: 35px;
+        margin-left: 100px;
+        border: none;
+    }
+
+    table {
+        margin-top: 20px;
+    }
+}

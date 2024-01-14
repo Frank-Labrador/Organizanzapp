@@ -8,7 +8,8 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Quantico:ital@1&family=Salsa&display=swap" rel="stylesheet" />
         <link rel="stylesheet" href="./css/styles.css" />
-        <script src="./js/main.js"></script>
+        <script src="./js/main.js" defer></script>
+        <script src="./js/tabla.js" defer></script>
     <title>OrganiZanZapp || inicio</title>
 </head>
 
@@ -91,8 +92,10 @@
             <label for="resultado" class="colocar_nome">Resultado: </label>
             <input type="number" name="resultado" id="resultado" readonly/>
             </div>
+            <div class="noAhorrasteOculto" id="noAhorro">
+                <p>No ahorraste nada :C</p>
+            </div>
         </section>
-    
     </main>
     <footer></footer>
 </body>
