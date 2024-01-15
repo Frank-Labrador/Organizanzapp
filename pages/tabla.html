@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./../css/styles.css" />
     <script src="./../js/main.js" defer></script>
     <script src="./../js/tabla.js" defer></script>
-    <title>OrganiZanZapp || Tabla de ahorros</title>
+    <title>OrganiZanZapp || Registro de ahorros</title>
 </head>
 
 <body>
@@ -29,8 +29,8 @@
     <main class="registroTabla">
         <h1>Registro de Ahorro</h1>
         <input type="text" name="" id="usuarioTabla" />
-
-        <table border="1">
+        <div class="tabla">
+                    <table border="2">
             <thead>
                 <tr>
                     <th>Mes</th>
@@ -39,9 +39,15 @@
             </thead>
             <tbody id="tablaDeAhorro"></tbody>
         </table>
+        </div>
+
+
+    <label for="sumaTotal">Cuanto llevas ahorrado por mes?</label>
+    <input type="number"  id="sumaTotal" readonly />
+
+
     </main>
     <footer></footer>
-    <script src="./../js/main.js"></script>
 </body>
 
 </html>

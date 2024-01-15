@@ -8,12 +8,15 @@ function obtenerResultadosLocalStorage() {
         "resultado": []
     };
 }
+
 let mesActual = 0;
 
 function agregarResultadoATabla() {
     let tabla = document.querySelector("#tablaDeAhorro");
     let usuario = obtenerResultadosLocalStorage();
     document.querySelector("#usuarioTabla").value = usuario.nombre + " " + usuario.apellido;
+
+    let sumaTotal=0;
 
     usuario.resultado.forEach((ahorro, index) => {
         let fila = tabla.insertRow();
@@ -26,7 +29,12 @@ function agregarResultadoATabla() {
 
         // Incrementar el mes actual para la siguiente iteración
         mesActual = (mesActual + 1) % 12;
+
+        sumaTotal += ahorro;
+
     });
+    //mostramos la sumatoria de los meses que llevamos en un input
+    document.querySelector("#sumaTotal").value = sumaTotal.toString();
 }
 
 function obtenerMeses(indice) {

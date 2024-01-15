@@ -107,8 +107,17 @@ main .resulForm .noAhorrasteMostrar {
   margin-left: 100px;
   border: none;
 }
-.registroTabla table {
+.registroTabla .tabla table {
   margin-top: 20px;
+  width: 50vh;
+  height: 30px;
+}
+.registroTabla .sumatoriaAhorro #totalAhorro {
+  display: flex;
+  justify-content: flex-end;
+}
+.registroTabla #sumaTotal {
+  margin-left: 10px;
 }
 
 /*# sourceMappingURL=styles.css.map */

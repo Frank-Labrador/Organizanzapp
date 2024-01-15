@@ -14,8 +14,23 @@
         margin-left: 100px;
         border: none;
     }
-
-    table {
+    .tabla{
+            table {
         margin-top: 20px;
+        width: 50vh;
+        height: 30px;
+    }
+    }
+
+
+    .sumatoriaAhorro{
+        #totalAhorro{
+        display: flex;
+        justify-content: flex-end;
+        }
+
+    }
+    #sumaTotal {
+        margin-left: 10px;
     }
 }
