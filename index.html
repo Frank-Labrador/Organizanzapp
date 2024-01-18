@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-    
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Quantico:ital@1&family=Salsa&display=swap" rel="stylesheet" />
-        <link rel="stylesheet" href="./css/styles.css" />
-        <script src="./js/main.js" defer></script>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Quantico:ital@1&family=Salsa&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <script src="./js/main.js" defer></script>
     <title>OrganiZanZapp || inicio</title>
 </head>
 
@@ -26,7 +26,10 @@
         </nav>
     </header>
     <main>
-        
+        <div class="formMoneda" id="simboloMoneda">
+
+        </div>
+
         <div class="popup-container">
             <label class="button" for="register-popup">Ingresa tu Nombre</label>
             <input type="checkbox" id="register-popup">
@@ -55,10 +58,10 @@
                 </div>
             </div>
         </div>
-        
+
         <section class="ahorroForm">
             <div class="formulario">
-                
+
                 <h1>Simula tus ahorros</h1>
 
                 <h3>Ingreso de sueldo</h3>
@@ -66,6 +69,7 @@
                 <section class="formSalario">
                     <label for="salario" class="colocar_nome">Salario </label>
                     <input type="number" name="salario" id="salario" required placeholder="Ingrese su salario" />
+                    <span class="simboloMoneda"></span>
                 </section>
 
                 <h3>Ingresa tus Gastos mensuales</h3>
@@ -74,40 +78,43 @@
                     <div>
                         <label for="arriendo" class="colocar_nome">Arriendo </label>
                         <input type="number" name="arriendo" id="arriendo" required placeholder="Gastos de arriendo" />
+                        <span class="simboloMoneda"></span>
                     </div>
 
                     <div>
                         <label for="transporte" class="colocar_email">Transporte </label>
                         <input type="number" name="transporte" id="transporte" required
                             placeholder="Gastos en transporte" />
+                            <span class="simboloMoneda"></span>
                     </div>
 
                     <div>
                         <label for="comida" class="formComida">Comida </label>
                         <input type="number" name="comida" id="comida" placeholder="Gastos en comida" required />
+                        <span class="simboloMoneda"></span>
                     </div>
 
                     <div>
                         <label for="luz" class="colocar_telefone">Luz </label>
-                        <input type="number" name="luz" id="luz" placeholder="Gastos de luz" required />
+                        <input type="number" name="luz" id="luz" placeholder="Gastos de luz" required /><span class="simboloMoneda"></span>
                     </div>
 
                     <div>
                         <label for="agua" class="colocar_nome">Agua </label>
-                        <input type="number" name="agua" id="agua" required placeholder="Gastos de Agua" />
+                        <input type="number" name="agua" id="agua" required placeholder="Gastos de Agua" /><span class="simboloMoneda"></span>
                     </div>
 
                     <div>
                         <label for="impuestos" class="colocar_email">Impuestos </label>
                         <input type="number" name="impuestos" id="impuestos" required
-                            placeholder="ingrese sus impuestos" />
+                            placeholder="ingrese sus impuestos" /><span class="simboloMoneda"></span>
                     </div>
 
                     <div>
                         <label for="gastosVarios" class="colocar_telefone">Gastos Varios
                         </label>
                         <input type="number" name="gastosVarios" id="gastosVarios" placeholder="Ingrese gastos extras"
-                            required />
+                            required /><span class="simboloMoneda"></span>
                     </div>
                 </div>
 
@@ -119,8 +126,9 @@
 
         <section class="resulForm">
             <div>
-            <label for="resultado" class="colocar_nome">Resultado: </label>
-            <input type="number" name="resultado" id="resultado" readonly/>
+                <label for="resultado" class="colocar_nome">Resultado: </label>
+                <input type="number" name="resultado" id="resultado" readonly />
+                <span class="simboloMoneda"></span>
             </div>
             <div class="noAhorrasteOculto" id="noAhorro">
                 <p>No ahorraste nada :C</p>

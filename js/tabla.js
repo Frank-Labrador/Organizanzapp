@@ -25,7 +25,7 @@ function agregarResultadoATabla() {
 
         // Asignar valores a las celdas
         celdaMes.textContent = obtenerMeses(index);
-        celdaAhorro.textContent = ahorro;
+        celdaAhorro.textContent = (ahorro);
 
         // Incrementar el mes actual para la siguiente iteración
         mesActual = (mesActual + 1) % 12;
@@ -33,10 +33,9 @@ function agregarResultadoATabla() {
         sumaTotal += ahorro;
     });
 
-    //mostramos la sumatoria de los meses que llevamos en un input
     document.querySelector("#sumaTotal").value = sumaTotal.toString();
-}
 
+}
 function obtenerMeses(indice) {
     const meses = [
         "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",

@@ -1,3 +1,48 @@
+
+
+//Función para cargar la configuración de moneda desde el JSON
+async function cargarConfiguracionMoneda() {
+    let monedaConfig;
+    try {
+        const response = await fetch('./monedas.json');
+
+        if (!response.ok) {
+            throw new Error('Error al cargar el archivo JSON');
+        }
+
+        monedaConfig = await response.json();
+    } catch (error) {
+        console.error(error);
+    }
+
+    let contenedorMonedas = document.querySelector("#simboloMoneda");
+    let contenidoMoneda = "";
+
+    for (let moneda of monedaConfig){
+        contenidoMoneda += ` 
+        <input type="radio" id="${moneda.id}" name="tipoMoneda" value="${moneda.id}" onclick="ponerSimbolo('${moneda.simbolo}')"/>
+        <label for="${moneda.id}">${moneda.nombre}</label>
+        `
+    }
+
+    contenedorMonedas.innerHTML = contenidoMoneda;
+}
+
+function ponerSimbolo(simbolo){
+let contenedores= document.querySelectorAll(".simboloMoneda");
+
+for(let contenedor of contenedores){
+contenedor.innerHTML=simbolo;
+
+}
+
+}
+
+document.addEventListener('DOMContentLoaded', async function () {
+    // Intenta cargar la configuración de moneda al cargar la página
+    await cargarConfiguracionMoneda();
+});
+
 //Creamos la funcion para crear el simulador de ahorro que interactua con el DOM
 function simuladorAhorro() {
 
@@ -12,6 +57,7 @@ function simuladorAhorro() {
     
     let gastos = arriendo + transporte + comida + luz + agua + impuestos + gastosVarios;
     let ahorroTotal = salario - gastos;
+
 
     //colocamos una condicion para cuando den numeros negativos
     if (ahorroTotal > 0) {

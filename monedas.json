@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "nombre": "Euro",
+        "simbolo": "€"
+    },
+    {
+        "id": 2,
+        "nombre": "USD",
+        "simbolo": "$"
+    },
+    {
+        "id": 3,
+        "nombre": "CLP",
+        "simbolo": "$"
+    },
+    {
+        "id": 4,
+        "nombre": "ARS",
+        "simbolo": "$"
+    }
+
+]
