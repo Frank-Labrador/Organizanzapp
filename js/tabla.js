@@ -18,13 +18,14 @@ function agregarResultadoATabla() {
 
     let sumaTotal = 0;
     let mesActual = 0;
-    usuario.resultado.forEach((ahorro, index) => {
+
+    usuario.resultado.forEach(ahorro => {
         let fila = tabla.insertRow();
         let celdaMes = fila.insertCell(0);
         let celdaAhorro = fila.insertCell(1);
 
         // Asignar valores a las celdas
-        celdaMes.textContent = obtenerMeses(index);
+        celdaMes.textContent = obtenerMeses(mesActual);
         celdaAhorro.textContent = (ahorro);
 
         // Incrementar el mes actual para la siguiente iteración
@@ -36,6 +37,7 @@ function agregarResultadoATabla() {
     document.querySelector("#sumaTotal").value = sumaTotal.toString();
 
 }
+
 function obtenerMeses(indice) {
     const meses = [
         "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",

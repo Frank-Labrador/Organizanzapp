@@ -1,5 +1,12 @@
 /*Estilos de header*/
 header{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    img{
+        width: 200px;
+    }
     background-color: $color-principal;
     border: 3px inset $color-secundario;
     nav{
@@ -10,6 +17,7 @@ header{
             padding: 30px;
             li{
                 a{
+                    font-size: 30px;
                     text-decoration: none;
                     color: $color-secundario;
                 }

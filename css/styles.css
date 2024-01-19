@@ -30,8 +30,15 @@ h3 {
 
 /*Estilos de header*/
 header {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
   background-color: #084B83;
   border: 3px inset #97DB4F;
+}
+header img {
+  width: 200px;
 }
 header nav ul {
   display: flex;
@@ -40,14 +47,27 @@ header nav ul {
   padding: 30px;
 }
 header nav ul li a {
+  font-size: 30px;
   text-decoration: none;
   color: #97DB4F;
 }
 
-main .popup-container {
+main {
+  padding-bottom: 100px;
+}
+main .botones {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  padding: 10px;
+}
+main .botones .formMoneda {
+  margin-right: 50px;
+}
+main .botones .popup-container {
   display: inline-flex;
 }
-main .popup-container .button {
+main .botones .popup-container .button {
   border: 2px solid #97DB4F;
   height: 40px;
   line-height: 40px;
@@ -58,7 +78,7 @@ main .popup-container .button {
   color: #97DB4F;
   cursor: pointer;
 }
-main .popup-container .popup {
+main .botones .popup-container .popup {
   position: fixed;
   top: 0;
   left: 0;
@@ -70,7 +90,7 @@ main .popup-container .popup {
   visibility: hidden;
   transition: 400ms all;
 }
-main .popup-container .popup > label {
+main .botones .popup-container .popup > label {
   position: absolute;
   top: 0;
   left: 0;
@@ -78,7 +98,7 @@ main .popup-container .popup > label {
   height: 100%;
   cursor: pointer;
 }
-main .popup-container .popup .inner {
+main .botones .popup-container .popup .inner {
   position: absolute;
   top: 100%;
   left: 50%;
@@ -91,7 +111,7 @@ main .popup-container .popup .inner {
   max-height: 100%;
   overflow: auto;
 }
-main .popup-container .popup .inner .title {
+main .botones .popup-container .popup .inner .title {
   height: 40px;
   display: flex;
   justify-content: space-between;
@@ -101,31 +121,31 @@ main .popup-container .popup .inner .title {
   top: 0;
   background: #fff;
 }
-main .popup-container .popup .inner .title h6 {
+main .botones .popup-container .popup .inner .title h6 {
   font-size: 15px;
   font-weight: 500;
 }
-main .popup-container .popup .inner .title label {
+main .botones .popup-container .popup .inner .title label {
   font-size: 14px;
   color: #999;
   cursor: pointer;
 }
-main .popup-container .popup .inner .title label:hover {
+main .botones .popup-container .popup .inner .title label:hover {
   color: #222;
 }
-main .popup-container .popup .inner .content {
+main .botones .popup-container .popup .inner .content {
   padding: 5px 15px 15px;
 }
-main .popup-container .popup .inner .content ul {
+main .botones .popup-container .popup .inner .content ul {
   list-style: none;
 }
-main .popup-container .popup .inner .content ul li {
+main .botones .popup-container .popup .inner .content ul li {
   margin-bottom: 15px;
 }
-main .popup-container .popup .inner .content ul li:last-child {
+main .botones .popup-container .popup .inner .content ul li:last-child {
   margin-bottom: 0;
 }
-main .popup-container .popup .inner .content ul li input {
+main .botones .popup-container .popup .inner .content ul li input {
   width: 100%;
   box-sizing: border-box;
   border: none;
@@ -133,11 +153,11 @@ main .popup-container .popup .inner .content ul li input {
   padding-bottom: 10px;
   font-size: 12px;
 }
-main .popup-container .popup .inner .content ul li input:focus {
+main .botones .popup-container .popup .inner .content ul li input:focus {
   outline: 0;
   border-color: #084B83;
 }
-main .popup-container .popup .inner .content ul li button {
+main .botones .popup-container .popup .inner .content ul li button {
   width: 100%;
   height: 30px;
   border-radius: 3px;
@@ -147,20 +167,20 @@ main .popup-container .popup .inner .content ul li button {
   font-size: 13px;
   cursor: pointer;
 }
-main .popup-container .popup .inner .content p {
+main .botones .popup-container .popup .inner .content p {
   font-size: 13px;
   line-height: 130%;
   margin-bottom: 15px;
 }
-main .popup-container .popup .inner .content p:last-child {
+main .botones .popup-container .popup .inner .content p:last-child {
   margin-bottom: 0;
 }
-main .popup-container .popup .inner .content .close-btn {
+main .botones .popup-container .popup .inner .content .close-btn {
   margin-top: 15px;
   padding-top: 15px;
   border-top: 1px solid #ddd;
 }
-main .popup-container .popup .inner .content .close-btn label {
+main .botones .popup-container .popup .inner .content .close-btn label {
   background: rgba(0, 0, 0, 0.05);
   display: block;
   line-height: 30px;
@@ -170,19 +190,19 @@ main .popup-container .popup .inner .content .close-btn label {
   border-radius: 3px;
   cursor: pointer;
 }
-main .popup-container .popup .inner .content .close-btn label:hover {
+main .botones .popup-container .popup .inner .content .close-btn label:hover {
   background: rgba(0, 0, 0, 0.1);
 }
-main .popup-container > input {
+main .botones .popup-container > input {
   position: absolute;
   left: -9999px;
   opacity: 0;
 }
-main .popup-container > input:checked + .popup {
+main .botones .popup-container > input:checked + .popup {
   opacity: 1;
   visibility: visible;
 }
-main .popup-container > input:checked + .popup .inner {
+main .botones .popup-container > input:checked + .popup .inner {
   top: 50%;
 }
 main .ahorroForm {
@@ -234,6 +254,7 @@ main .resulForm .noAhorrasteMostrar {
 }
 
 .registroTabla {
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -252,13 +273,39 @@ main .resulForm .noAhorrasteMostrar {
   margin-top: 20px;
   width: 50vh;
   height: 30px;
+  border: 3px solid #084B83;
+}
+.registroTabla .tabla table tr {
+  border: 3px dotted #97DB4F;
 }
 .registroTabla .sumatoriaAhorro #totalAhorro {
   display: flex;
   justify-content: flex-end;
 }
-.registroTabla #sumaTotal {
+.registroTabla .sumaTotal {
+  padding: 20px;
   margin-left: 10px;
+  margin-top: 50px;
+}
+.registroTabla input {
+  border: none;
+  margin-left: 200px;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+footer {
+  background-color: #084B83;
+  color: #97DB4F;
+  padding: 20px;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -14,6 +14,7 @@
 
 <body>
     <header>
+        <img src="./assets/OrganiZanZapplogo.png" alt="OrganiZanZapplogo">
         <nav>
             <ul>
                 <li>
@@ -26,9 +27,9 @@
         </nav>
     </header>
     <main>
-        <div class="formMoneda" id="simboloMoneda">
 
-        </div>
+        <section class="botones">
+        <div class="formMoneda" id="simboloMoneda"></div>
 
         <div class="popup-container">
             <label class="button" for="register-popup">Ingresa tu Nombre</label>
@@ -58,6 +59,7 @@
                 </div>
             </div>
         </div>
+        </section>
 
         <section class="ahorroForm">
             <div class="formulario">
@@ -78,43 +80,40 @@
                     <div>
                         <label for="arriendo" class="colocar_nome">Arriendo </label>
                         <input type="number" name="arriendo" id="arriendo" required placeholder="Gastos de arriendo" />
-                        <span class="simboloMoneda"></span>
                     </div>
 
                     <div>
                         <label for="transporte" class="colocar_email">Transporte </label>
                         <input type="number" name="transporte" id="transporte" required
                             placeholder="Gastos en transporte" />
-                            <span class="simboloMoneda"></span>
                     </div>
 
                     <div>
                         <label for="comida" class="formComida">Comida </label>
                         <input type="number" name="comida" id="comida" placeholder="Gastos en comida" required />
-                        <span class="simboloMoneda"></span>
                     </div>
 
                     <div>
                         <label for="luz" class="colocar_telefone">Luz </label>
-                        <input type="number" name="luz" id="luz" placeholder="Gastos de luz" required /><span class="simboloMoneda"></span>
+                        <input type="number" name="luz" id="luz" placeholder="Gastos de luz" required />
                     </div>
 
                     <div>
                         <label for="agua" class="colocar_nome">Agua </label>
-                        <input type="number" name="agua" id="agua" required placeholder="Gastos de Agua" /><span class="simboloMoneda"></span>
+                        <input type="number" name="agua" id="agua" required placeholder="Gastos de Agua" />
                     </div>
 
                     <div>
                         <label for="impuestos" class="colocar_email">Impuestos </label>
                         <input type="number" name="impuestos" id="impuestos" required
-                            placeholder="ingrese sus impuestos" /><span class="simboloMoneda"></span>
+                            placeholder="ingrese sus impuestos" /></span>
                     </div>
 
                     <div>
                         <label for="gastosVarios" class="colocar_telefone">Gastos Varios
                         </label>
                         <input type="number" name="gastosVarios" id="gastosVarios" placeholder="Ingrese gastos extras"
-                            required /><span class="simboloMoneda"></span>
+                            required />
                     </div>
                 </div>
 
@@ -135,7 +134,13 @@
             </div>
         </section>
     </main>
-    <footer></footer>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 OrganiZanZapp. Todos los derechos reservados.</p>
+            <p>Contacto: info@organizanzapp.com</p>
+        </div>
+    </footer>
+    
 </body>
 
 </html>

@@ -1,0 +1,13 @@
+footer {
+    background-color: $color-principal;
+    color: $color-secundario;
+    padding: 20px;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
