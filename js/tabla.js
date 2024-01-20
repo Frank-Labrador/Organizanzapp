@@ -62,7 +62,7 @@ function crearGrafica() {
     canvas.height = contenedorGrafica.clientHeight;
 
 
-    const meses = usuario.resultado.map((_, indice) => obtenerMeses(indice));
+    const meses = usuario.resultado.map((_, indice) => obtenerMeses(indice % 12));
 
     const ctx = canvas.getContext("2d");
     new Chart(ctx, {
