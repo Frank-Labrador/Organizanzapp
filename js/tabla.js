@@ -16,6 +16,12 @@ function agregarResultadoATabla() {
     //seteando el nombre de usuario en la pantalla
     document.querySelector("#usuarioTabla").value = usuario.nombre + " " + usuario.apellido;
 
+    // Obtener el símbolo de moneda desde el local storage
+    const simboloGuardado = localStorage.getItem("simboloMoneda");
+
+    // Asignar el símbolo de moneda al elemento del DOM
+    document.querySelector(".simboloMoneda").textContent = simboloGuardado || "";
+
     let sumaTotal = 0;
     let mesActual = 0;
 

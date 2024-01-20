@@ -245,6 +245,10 @@ main .resulForm {
 }
 main .resulForm input {
   border: none;
+  font-size: 20px;
+  font-weight: bold;
+  width: 100px;
+  margin-left: 35px;
 }
 main .resulForm .noAhorrasteOculto {
   display: none;
@@ -254,7 +258,8 @@ main .resulForm .noAhorrasteMostrar {
 }
 
 .registroTabla {
-  height: 100vh;
+  height: auto;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -278,23 +283,24 @@ main .resulForm .noAhorrasteMostrar {
 .registroTabla .tabla table tr {
   border: 3px dotted #97DB4F;
 }
-.registroTabla .sumatoriaAhorro #totalAhorro {
-  display: flex;
-  justify-content: flex-end;
-}
 .registroTabla .sumaTotal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   padding: 20px;
-  margin-left: 10px;
   margin-top: 50px;
 }
 .registroTabla input {
   border: none;
-  margin-left: 200px;
+  width: 100px;
   font-weight: bold;
-  font-size: 30px;
+  font-size: 20px;
+  margin-left: 100px;
 }
 
 footer {
+  position: fixed;
   background-color: #084B83;
   color: #97DB4F;
   padding: 20px;

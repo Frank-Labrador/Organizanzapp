@@ -1,5 +1,3 @@
-
-
 //Función para cargar la configuración de moneda desde el JSON
 async function cargarConfiguracionMoneda() {
     let monedaConfig;
@@ -26,6 +24,12 @@ async function cargarConfiguracionMoneda() {
     }
 
     contenedorMonedas.innerHTML = contenidoMoneda;
+
+        // Cargar el símbolo desde el local storage
+        const simboloGuardado = localStorage.getItem("simboloMoneda");
+        if (simboloGuardado) {
+            ponerSimbolo(simboloGuardado);
+        }
 }
 
 function ponerSimbolo(simbolo){
@@ -34,6 +38,7 @@ let contenedores= document.querySelectorAll(".simboloMoneda");
 for(let contenedor of contenedores){
 contenedor.innerHTML=simbolo;
 
+localStorage.setItem("simboloMoneda", simbolo)
 }
 
 }

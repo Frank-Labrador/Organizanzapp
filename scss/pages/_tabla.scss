@@ -1,5 +1,7 @@
+
 .registroTabla {
-    height: 100vh;
+    height: auto;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -28,22 +30,20 @@
     }
 
 
-    .sumatoriaAhorro{
-        #totalAhorro{
-        display: flex;
-        justify-content: flex-end;
-        }
-
-    }
     .sumaTotal {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         padding: 20px;
-        margin-left: 10px;
         margin-top: 50px;
     }
     input{
         border: none;
-        margin-left: 200px;
+        width: 100px;
         font-weight: bold;
-        font-size: 30px;
+        font-size: 20px;
+        margin-left: 100px;
     }
+
 }
