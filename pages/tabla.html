@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Quantico:ital@1&family=Salsa&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./../css/styles.css" />
     <script src="./../js/tabla.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <title>OrganiZanZapp || Registro de ahorros</title>
 </head>
 
@@ -49,6 +50,11 @@
             <input type="number" id="sumaTotal" readonly />
             <span class="simboloMoneda"></span>
         </div>
+
+        <div class="graficaM">
+                    <canvas id="graficaMeses"></canvas>
+        </div>
+
     </main>
     <footer>
         <div class="footer-content">

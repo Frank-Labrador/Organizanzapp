@@ -35,7 +35,7 @@ header {
   justify-content: space-between;
   align-items: center;
   background-color: #084B83;
-  border: 3px inset #97DB4F;
+  border: 3px inset #97db4f;
 }
 header img {
   width: 200px;
@@ -49,7 +49,7 @@ header nav ul {
 header nav ul li a {
   font-size: 30px;
   text-decoration: none;
-  color: #97DB4F;
+  color: #97db4f;
 }
 
 main {
@@ -68,14 +68,14 @@ main .botones .popup-container {
   display: inline-flex;
 }
 main .botones .popup-container .button {
-  border: 2px solid #97DB4F;
+  border: 2px solid #97db4f;
   height: 40px;
   line-height: 40px;
   background: #084B83;
   padding: 0 15px;
   border-radius: 3px;
   font-size: 14px;
-  color: #97DB4F;
+  color: #97db4f;
   cursor: pointer;
 }
 main .botones .popup-container .popup {
@@ -222,12 +222,12 @@ main .ahorroForm button {
   width: 100px;
   height: 50px;
   background-color: #084B83;
-  color: #97DB4F;
+  color: #97db4f;
   font-size: 15px;
   font-weight: bold;
 }
 main .ahorroForm button:hover {
-  border: 2px solid #97DB4F;
+  border: 2px solid #97db4f;
 }
 main .ahorroForm .formGastos div {
   margin-bottom: 20px;
@@ -281,7 +281,7 @@ main .resulForm .noAhorrasteMostrar {
   border: 3px solid #084B83;
 }
 .registroTabla .tabla table tr {
-  border: 3px dotted #97DB4F;
+  border: 3px dotted #97db4f;
 }
 .registroTabla .sumaTotal {
   display: flex;
@@ -298,11 +298,16 @@ main .resulForm .noAhorrasteMostrar {
   font-size: 20px;
   margin-left: 100px;
 }
+.registroTabla .graficaM {
+  margin-top: 50px;
+  width: 500px;
+  height: 500px;
+}
 
 footer {
   position: fixed;
   background-color: #084B83;
-  color: #97DB4F;
+  color: #97db4f;
   padding: 20px;
   text-align: center;
   bottom: 0;

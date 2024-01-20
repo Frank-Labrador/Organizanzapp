@@ -53,7 +53,44 @@ function obtenerMeses(indice) {
     return meses[indice];
 }
 
+function crearGrafica() {
+    const contenedorGrafica = document.getElementById("graficaMeses");
+    const usuario = obtenerResultadosLocalStorage();
+
+    const canvas = document.getElementById("graficaMeses");
+    canvas.width = contenedorGrafica.clientWidth;
+    canvas.height = contenedorGrafica.clientHeight;
+
+
+    const meses = usuario.resultado.map((_, indice) => obtenerMeses(indice));
+
+    const ctx = canvas.getContext("2d");
+    new Chart(ctx, {
+        type: "bar",
+        data: {
+            labels: meses,
+            datasets: [{
+                label: "Ahorros por Mes",
+                data: usuario.resultado,
+                backgroundColor: 'rgba(151, 219, 79)', 
+                borderColor: 'rgba(75, 192, 192, 1)', 
+                borderWidth: 1 
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+}
+
+
 
 document.addEventListener("DOMContentLoaded", function() {
     agregarResultadoATabla();
+    crearGrafica();
 });
+
